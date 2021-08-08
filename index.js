@@ -71,5 +71,4 @@ const buttonNewCard = document.createElement('link');
 root.append(buttonNewCard);
 buttonNewCard.className = 'w-1/4 flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10 cursor-pointer mb-4'
 buttonNewCard.textContent = 'Add new task';
-
 buttonNewCard.onclick = setInput;
