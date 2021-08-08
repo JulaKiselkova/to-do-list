@@ -20,7 +20,7 @@ function creatCard(obj) {
     const cardText = document.createElement('p');
     const cardTime = document.createElement('p');
     const cardBtnContainer = document.createElement('div');
-    const cardBtnDone = document.createElement('link'); // тут для каждой ссылки свою константу или для двух кнопок где раздичается контент можно одну переменную
+    const cardBtnDone = document.createElement('link'); // тут лучше для каждой ссылки свою константу или для двух кнопок, где раздичается контент можно одну константу ?
     const cardBtnDelete = document.createElement('link');
 
     card.className = 'w-1/4 border-4 border-blue-200 mb-4 rounded-2xl bg-gradient-to-r from-green-200 to-blue-200';
@@ -73,5 +73,3 @@ buttonNewCard.className = 'w-1/4 flex items-center justify-center px-8 py-3 bord
 buttonNewCard.textContent = 'Add new task';
 
 buttonNewCard.onclick = setInput;
-
-//setInput();
