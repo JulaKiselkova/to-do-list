@@ -20,8 +20,8 @@ function creatCard(obj) {
     const cardText = document.createElement('p');
     const cardTime = document.createElement('p');
     const cardBtnContainer = document.createElement('div');
-    const cardBtnDone = document.createElement('link'); // тут лучше для каждой ссылки свою константу или для двух кнопок, где раздичается контент можно одну константу ?
-    const cardBtnDelete = document.createElement('link');
+    const cardBtnDone = document.createElement('a'); // тут для каждой ссылки свою константу или для двух кнопок где раздичается контент можно одну переменную
+    const cardBtnDelete = document.createElement('a');
 
     card.className = 'w-1/4 border-4 border-blue-200 mb-4 rounded-2xl bg-gradient-to-r from-green-200 to-blue-200';
     root.className = 'flex items-center justify-center bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-col';
@@ -43,13 +43,20 @@ function creatCard(obj) {
     root.append(card);
 }
 
+function creatInputButton() {
+    const buttonNewCard = document.createElement('a');
+    buttonNewCard.className = 'w-1/4 flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-400 hover:bg-green-500 md:py-4 md:text-lg md:px-10 cursor-pointer mb-4'
+    buttonNewCard.textContent = 'Add new task';
+    buttonNewCard.onclick = setInput;
+    root.append(buttonNewCard);
+}
+
 function setInput() {
     const cardTitle = document.createElement('h2');
     const cardText = document.createElement('p');
     const cardTime = document.createElement('p');
 
     let obj = {};
-
 
     obj.title = prompt('Введите заголовок');
     obj.text = prompt('Введите текст');
@@ -63,12 +70,8 @@ function setInput() {
     }
 }
 
+creatInputButton();
+
 for( let obj of todos ) {
     creatCard(obj);
 }
-
-const buttonNewCard = document.createElement('link');
-root.append(buttonNewCard);
-buttonNewCard.className = 'w-1/4 flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10 cursor-pointer mb-4'
-buttonNewCard.textContent = 'Add new task';
-buttonNewCard.onclick = setInput;
