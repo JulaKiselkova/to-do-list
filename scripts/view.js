@@ -15,7 +15,7 @@ export const view = {
     },
     render: function(root){
         for(let obj of todos){
-            root.insertAdjacentHTML('beforeend', сard(obj));
+            root.insertAdjacentHTML('beforeend', card(obj));
         }
     },
 }
