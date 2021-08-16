@@ -1,40 +1,5 @@
-function inputButton() {
-    const buttonNewCard = document.createElement('a');
-    buttonNewCard.className = 'w-1/4 flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-400 hover:bg-green-500 md:py-4 md:text-lg md:px-10 cursor-pointer mb-4'
-    buttonNewCard.textContent = 'Add new task';
-    root.append(buttonNewCard);
-    return buttonNewCard;
-}
-
-function creatCard(obj) {
-  const card = document.createElement('div');
-  const cardTitle = document.createElement('h2');
-  const cardText = document.createElement('p');
-  const cardTime = document.createElement('p');
-  const cardBtnContainer = document.createElement('div');
-  const cardBtnDone = document.createElement('a');
-  const cardBtnDelete = document.createElement('a');
-
-  card.className = 'w-1/4 border-4 border-blue-200 mb-4 rounded-2xl bg-gradient-to-r from-green-200 to-blue-200';
-  root.className = 'flex items-center justify-center bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-col';
-  cardBtnDone.className = 'inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white cursor-pointer hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm transition duration-500 ease-in-out bg-blue-600 hover:bg-green-500 transform hover:-translate-y-1 hover:scale-110 mb-5'
-  cardBtnDelete.className = 'inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white cursor-pointer hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm transition duration-500 ease-in-out bg-blue-600 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 mb-5'
-    
-  card.id = `${obj.id}`
-
-  cardTitle.className = 'text-lg leading-6 font-medium text-gray-900 mt-5 text-2xl ml-6' 
-  cardBtnContainer.className = 'my-5'
-  cardText.className = 'mt-2 text-lg ml-6'
-  cardTime.className = 'mt-2 text-lg ml-6'
-
-  cardTitle.textContent = obj.title;
-  cardText.textContent = obj.text;
-  cardTime.textContent = obj.time;
-  cardBtnDone.textContent = 'Done';
-  cardBtnDelete.textContent = 'Delete';
-
-  card.append(cardTitle, cardText, cardTime, cardBtnContainer, cardBtnDone, cardBtnDelete);
-  root.append(card);
+function inputButton(){
+  return `<a class="w-1/4 flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-400 hover:bg-green-500 md:py-4 md:text-lg md:px-10 cursor-pointer mb-4">Add new task</a>`
 }
 
 function card(obj) {
@@ -80,7 +45,7 @@ function modal() {
             Deactivate
           </button>
           <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
-            Cancel
+            Cancelllll
           </button>
         </div>
       </div>
@@ -88,4 +53,4 @@ function modal() {
   </div>`
 }
 
-export {inputButton, modal, card, creatCard};
+export {inputButton, modal, card};

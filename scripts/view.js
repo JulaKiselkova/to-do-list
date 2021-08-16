@@ -1,6 +1,6 @@
 import {model} from "./model.js";
 import {todos} from "./model.js";
-import {card, creatCard, inputButton, modal} from "./templates.js";
+import {card, inputButton, modal} from "./templates.js";
 
 export const view = {
     init: function(){
@@ -19,4 +19,3 @@ export const view = {
         }
     },
 }
-//kfkfkfkk
